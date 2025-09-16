@@ -13,7 +13,8 @@ public class UserServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         System.out.println("UserServlet::doGet");
-        req.setAttribute("UserServlet", "Hello from UserServlet");
+        String userName = req.getParameter("userName");
+        req.setAttribute("userName", "Alexey");
         req.getRequestDispatcher("user.jsp").forward(req, resp);
 
     }
