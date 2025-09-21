@@ -1,9 +1,8 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<div class="card shadow-sm">
+<div class="card border-0 shadow-sm">
     <div class="card-body">
-        <h4 class="h5 mb-2">Це підключений фрагмент</h4>
-        <p class="mb-0">
-            Fragment's key = <code><%= request.getParameter("key") %></code>
-        </p>
+        <h5 class="card-title mb-2">Фрагмент сторінки</h5>
+        <p class="card-text mb-1">Ключ фрагмента:</p>
+        <span class="badge bg-secondary"><%= request.getParameter("key") %></span>
     </div>
- </div>
+</div>

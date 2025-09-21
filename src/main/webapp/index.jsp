@@ -84,6 +84,29 @@
             <h3 class="mt-5 mb-3">Передача даних від серверу (контролера)</h3>
             <div class="alert alert-info"><%= request.getAttribute("HomeServlet") %></div>
             <% } %>
+            <div class="col-12 col-lg-4">
+                <div class="card border-0 shadow-sm rounded-3">
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold mb-3 text-primary">
+                            Сервіс часової позначки
+                        </h5>
+                        <p class="card-text text-secondary mb-2">
+                            Поточні секунди з моменту UNIX-епохи:
+                        </p>
+                        <div class="py-3">
+                            <span class="display-5 fw-semibold text-dark">
+                                <span class="badge bg-gradient bg-primary px-3 py-2">
+                                    <%= request.getAttribute("UnixTimestampSeconds") %>
+                                </span>
+                            </span>
+                        </div>
+                        <div class="mt-2 small text-muted fst-italic">
+                            Значення оновлюється при кожному відкритті сторінки
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
         <jsp:include page="WEB-INF/footer.jsp"/>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
