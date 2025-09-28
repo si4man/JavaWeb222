@@ -82,7 +82,7 @@
                 <jsp:param name="key" value="Value"/>
             </jsp:include>
             <h3 class="mt-5 mb-3">Передача даних від серверу (контролера)</h3>
-            <div class="alert alert-info"><%= request.getAttribute("HomeServlet") %></div>
+            <div class="alert alert-info"><%= request.getAttribute("HomeServlet") %>  </div>
             <% } %>
             <div class="col-12 col-lg-4">
                 <div class="card border-0 shadow-sm rounded-3">
@@ -105,7 +105,15 @@
                         </div>
                     </div>
                 </div>
+                <div class="card border-0 shadow-sm mt-4">
+                    <div class="card-body">
+                        <h5 class="card-title mb-2">Час у БД</h5>
+                        <p class="card-text mb-3">Поточна дата-час з сервера БД:</p>
+                        <span class="display-6"><span class="badge bg-secondary"><%= request.getAttribute("DbTime") %></span></span>
+                    </div>
+                </div>
             </div>
+
 
         </div>
         <jsp:include page="WEB-INF/footer.jsp"/>

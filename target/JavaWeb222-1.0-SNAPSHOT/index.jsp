@@ -82,7 +82,7 @@
                 <jsp:param name="key" value="Value"/>
             </jsp:include>
             <h3 class="mt-5 mb-3">Передача даних від серверу (контролера)</h3>
-            <div class="alert alert-info"><%= request.getAttribute("HomeServlet") %></div>
+            <div class="alert alert-info"><%= request.getAttribute("HomeServlet") %>  </div>
             <% } %>
             <div class="col-12 col-lg-4">
                 <div class="card border-0 shadow-sm rounded-3">
